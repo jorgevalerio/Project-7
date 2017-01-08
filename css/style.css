@@ -1,0 +1,237 @@
+
+body {
+	
+	font-family: 'Open Sans', 'Lato',sans-serif;
+	font-size: 16px;
+	color: #6A6565;
+	background-color: #E1E1E1;
+	
+
+}
+
+/* Preloading images */
+
+#preload-01 { background: url(../icons/pause-icon.png) no-repeat -9999px -9999px; }
+#preload-02 { background: url(../icons/play-icon.png) no-repeat -9999px -9999px; }
+#preload-03 { background: url(../icons/fullscreen-icon.png) no-repeat -9999px -9999px; }
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 16px;
+  width: 8px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -5px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 16px;
+  width: 8px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 16px;
+  width: 8px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #ff9900;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ff9900;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #ff9900;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #ff9900;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #ff9900;
+}
+input[type=range]::-ms-fill-upper {
+  background: #ff9900;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #ff9900;
+}
+
+
+
+
+h1,h2,h3,h4,h5,h6 {
+	font-family:'Lato', sans-serif;
+}
+
+
+.wrapper{
+	margin: auto;
+	width: 960px;
+	padding: 0;
+}
+#videocontainer {
+
+	width: 100%;
+	margin:auto;
+	padding: 0;
+	  position: relative;
+
+
+}
+
+.content {
+	width: 100%;
+	padding: 0 20px;
+	
+	
+}
+
+
+div #video_controls_bar{
+	background-color: rgba(0, 0, 0, 0.3);
+	color: white;
+	padding-left: 1%;
+	padding-right: 1%;
+	vertical-align: middle;
+	position: absolute;
+	bottom: 5px;
+	width: 98%;
+ 
+}
+
+.floatright {
+	float: right;
+}
+
+button#playpausebtn{
+	padding-top: 10px;
+	background: url(../icons/pause-icon.png);
+	border: none;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+}
+button#playpausebtn:hover{
+	opacity:  1.0;
+}
+
+button#mutebtn{
+	background: url(../icons/volume-off-icon.png);
+	border: none;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+}
+
+button#mutebtn:hover{
+	opacity:  1.0;
+}
+
+
+button#fullscreenbtn{
+	background: url(../icons/fullscreen-icon.png);
+	border: none;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+}
+button#fullscreenbtn:hover{
+	opacity:  1.0;
+}
+
+
+#hidebar {
+	margin-top: 10px;
+	display: none;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items: center;
+	
+}
+
+.centervertical{
+	display: inline-block;
+	padding-top: 3px;
+	align-items: center;
+	vertical-align: top;
+	
+}
+
+
