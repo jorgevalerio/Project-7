@@ -1,5 +1,6 @@
 
-var vid, playbtn, seekslider,curtimetext,durtimetext,mutebtn,fullscreenbtn,hidebar,videocontainer;
+var vid, playbtn, seekslider,curtimetext,durtimetext,mutebtn,fullscreenbtn,hidebar,videocontainer, q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16;
+
 
 function intializePlayer () {
 
@@ -12,8 +13,23 @@ function intializePlayer () {
 	fullscreenbtn = document.getElementById('fullscreenbtn');
 	videocontainer = document.getElementById('videocontainer');
 	hidebar = document.getElementById('hidebar');
-
-
+	
+	q1 = document.getElementById('q1');
+	q2 = document.getElementById('q2');
+	q3 = document.getElementById('q3');
+	q4 = document.getElementById('q4');
+	q5 = document.getElementById('q5');
+	q6 = document.getElementById('q6');
+	q7 = document.getElementById('q7');
+	q8 = document.getElementById('q8');
+	q9 = document.getElementById('q9');
+	q10 = document.getElementById('q10');
+	q11 = document.getElementById('q11');
+	q12 = document.getElementById('q12');
+	q13 = document.getElementById('q13');
+	q14 = document.getElementById('q14');
+	q15 = document.getElementById('q15');
+	q16 = document.getElementById('q16');
 
 // Event listeners
 	
@@ -24,10 +40,6 @@ function intializePlayer () {
 	fullscreenbtn.addEventListener("click",toggleFullScreen,false);
 	videocontainer.addEventListener("mouseover",showhidebar,false);
 	videocontainer.addEventListener("onmouseout",hidebar,false);
-
-
-
-
 } 
 
 window.onload = intializePlayer;
@@ -78,6 +90,56 @@ function seektimeupdate () {
 	curtimetext.innerHTML = curmins+":"+cursecs;
 	durtimetext.innerHTML = durmins+":"+dursecs;
 	
+	if (vid.currentTime < 4.13) {q1.classList.add("high");}
+	if (vid.currentTime > 4.13) {q1.classList.remove("high");}
+	
+	if (vid.currentTime > 4.14) {q2.classList.add("high");}
+	if (vid.currentTime > 7.52) {q2.classList.remove("high");}
+	
+	if (vid.currentTime > 7.53) {q3.classList.add("high");}
+	if (vid.currentTime > 11.27) {q3.classList.remove("high");}
+	
+	if (vid.currentTime > 11.27) {q4.classList.add("high");}
+	if (vid.currentTime > 13.96) {q4.classList.remove("high");}
+	
+	if (vid.currentTime > 13.96) {q5.classList.add("high");}
+	if (vid.currentTime > 17.94) {q5.classList.remove("high");}
+	
+	if (vid.currentTime > 17.94) {q6.classList.add("high");}
+	if (vid.currentTime > 22.37) {q6.classList.remove("high");}
+	
+	if (vid.currentTime > 22.37) {q7.classList.add("high");}
+	if (vid.currentTime > 26.88) {q7.classList.remove("high");}
+	
+	if (vid.currentTime > 26.88) {q8.classList.add("high");}
+	if (vid.currentTime > 30.92) {q8.classList.remove("high");}
+	
+	if (vid.currentTime > 32.10) {q9.classList.add("high");}
+	if (vid.currentTime > 34.73) {q9.classList.remove("high");}
+	
+	if (vid.currentTime > 34.73) {q10.classList.add("high");}
+	if (vid.currentTime > 39.43) {q10.classList.remove("high");}
+	
+	if (vid.currentTime > 39.43) {q11.classList.add("high");}
+	if (vid.currentTime > 41.19) {q11.classList.remove("high");}
+	
+	if (vid.currentTime > 42.35) {q12.classList.add("high");}
+	if (vid.currentTime > 46.30) {q12.classList.remove("high");}
+	
+	if (vid.currentTime > 46.30) {q13.classList.add("high");}
+	if (vid.currentTime > 49.27) {q13.classList.remove("high");}
+	
+	if (vid.currentTime > 49.27) {q14.classList.add("high");}
+	if (vid.currentTime > 53.76) {q14.classList.remove("high");}
+	
+	if (vid.currentTime > 53.76) {q15.classList.add("high");}
+	if (vid.currentTime > 57.78) {q15.classList.remove("high");}
+	
+	if (vid.currentTime > 57.78) {q16.classList.add("high");}
+	if (vid.currentTime > 59.02) {q16.classList.remove("high");}
+	
+
+	
 }
 
 function vidmute () {
@@ -111,6 +173,17 @@ function toggleFullScreen (){
 		vid.mozRequestFullScreen();
 	}
 }
+
+
+
+	
+
+
+
+
+
+
+
 
 
 

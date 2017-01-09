@@ -9,6 +9,8 @@ body {
 
 }
 
+*{outline: none;}
+
 /* Preloading images */
 
 #preload-01 { background: url(../icons/pause-icon.png) no-repeat -9999px -9999px; }
@@ -150,7 +152,7 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
-.content {
+#content {
 	width: 100%;
 	padding: 0 20px;
 	
@@ -233,5 +235,12 @@ button#fullscreenbtn:hover{
 	vertical-align: top;
 	
 }
+
+.high {
+	
+	background-color: #ff9900;
+	color: #fff;
+}
+
 
 
