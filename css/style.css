@@ -221,12 +221,21 @@ button#fullscreenbtn:hover{
 
 #hidebar {
 	margin-top: 10px;
-	display: none;
+	display: flex;
 	flex-direction: row;
 	justify-content:space-between;
 	align-items: center;
 	
 }
+
+
+#hidebar-show {
+	display: flex;
+	margin-top: 10px;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items: center;
+	}
 
 .centervertical{
 	display: inline-block;

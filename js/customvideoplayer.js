@@ -38,20 +38,18 @@ function intializePlayer () {
 	vid.addEventListener("timeupdate",seektimeupdate,false);
 	mutebtn.addEventListener("click",vidmute,false);
 	fullscreenbtn.addEventListener("click",toggleFullScreen,false);
-	videocontainer.addEventListener("mouseover",showhidebar,false);
-	videocontainer.addEventListener("onmouseout",hidebar,false);
 } 
 
 window.onload = intializePlayer;
 
-// $(document).ready(function () {
-//        $("#videocontainer").mouseenter(function () {
-//           $("#hidebar").show();
-//        });
-//        $("#videocontainer").mouseleave(function () {
-//            $("#hidebar").hide();
-//        });
-//   });
+ $(document).ready(function () {
+        $("#videocontainer").mouseenter(function () {
+           $("#hidebar").show();
+        });
+        $("#videocontainer").mouseleave(function () {
+            $("#hidebar").hide();
+        });
+   });
 
 function playPause(){
 		
@@ -90,7 +88,7 @@ function seektimeupdate () {
 	curtimetext.innerHTML = curmins+":"+cursecs;
 	durtimetext.innerHTML = durmins+":"+dursecs;
 	
-	if (vid.currentTime < 4.13) {q1.classList.add("high");}
+	if (vid.currentTime < 4.12) {q1.classList.add("high");}
 	if (vid.currentTime > 4.13) {q1.classList.remove("high");}
 	
 	if (vid.currentTime > 4.14) {q2.classList.add("high");}
@@ -99,50 +97,50 @@ function seektimeupdate () {
 	if (vid.currentTime > 7.53) {q3.classList.add("high");}
 	if (vid.currentTime > 11.27) {q3.classList.remove("high");}
 	
-	if (vid.currentTime > 11.27) {q4.classList.add("high");}
+	if (vid.currentTime > 11.28) {q4.classList.add("high");}
 	if (vid.currentTime > 13.96) {q4.classList.remove("high");}
 	
-	if (vid.currentTime > 13.96) {q5.classList.add("high");}
+	if (vid.currentTime > 13.97) {q5.classList.add("high");}
 	if (vid.currentTime > 17.94) {q5.classList.remove("high");}
 	
-	if (vid.currentTime > 17.94) {q6.classList.add("high");}
+	if (vid.currentTime > 17.95) {q6.classList.add("high");}
 	if (vid.currentTime > 22.37) {q6.classList.remove("high");}
 	
-	if (vid.currentTime > 22.37) {q7.classList.add("high");}
+	if (vid.currentTime > 22.38) {q7.classList.add("high");}
 	if (vid.currentTime > 26.88) {q7.classList.remove("high");}
 	
-	if (vid.currentTime > 26.88) {q8.classList.add("high");}
+	if (vid.currentTime > 26.89) {q8.classList.add("high");}
 	if (vid.currentTime > 30.92) {q8.classList.remove("high");}
 	
 	if (vid.currentTime > 32.10) {q9.classList.add("high");}
 	if (vid.currentTime > 34.73) {q9.classList.remove("high");}
 	
-	if (vid.currentTime > 34.73) {q10.classList.add("high");}
+	if (vid.currentTime > 34.74) {q10.classList.add("high");}
 	if (vid.currentTime > 39.43) {q10.classList.remove("high");}
 	
-	if (vid.currentTime > 39.43) {q11.classList.add("high");}
+	if (vid.currentTime > 39.44) {q11.classList.add("high");}
 	if (vid.currentTime > 41.19) {q11.classList.remove("high");}
 	
 	if (vid.currentTime > 42.35) {q12.classList.add("high");}
 	if (vid.currentTime > 46.30) {q12.classList.remove("high");}
 	
-	if (vid.currentTime > 46.30) {q13.classList.add("high");}
+	if (vid.currentTime > 46.31) {q13.classList.add("high");}
 	if (vid.currentTime > 49.27) {q13.classList.remove("high");}
 	
-	if (vid.currentTime > 49.27) {q14.classList.add("high");}
+	if (vid.currentTime > 49.28) {q14.classList.add("high");}
 	if (vid.currentTime > 53.76) {q14.classList.remove("high");}
 	
-	if (vid.currentTime > 53.76) {q15.classList.add("high");}
+	if (vid.currentTime > 53.77) {q15.classList.add("high");}
 	if (vid.currentTime > 57.78) {q15.classList.remove("high");}
 	
-	if (vid.currentTime > 57.78) {q16.classList.add("high");}
+	if (vid.currentTime > 57.79) {q16.classList.add("high");}
 	if (vid.currentTime > 59.02) {q16.classList.remove("high");}
 	
 
 	
 }
 
-function vidmute () {
+function vidmute(){
 	
 	if(vid.muted) {
 			vid.muted = false;
@@ -153,18 +151,11 @@ function vidmute () {
 		}
 }
 
-function showhidebar () {
-	hidebar.style.display= "flex";
-}
-
-
-function hidebar () {
-	hidebar.style.display= "none";
-}
 
 
 
-function toggleFullScreen (){
+
+function toggleFullScreen(){
 	if(vid.requestFullScreen){
 		vid.requestFullScreen();
 	} else if(vid.webkitRequestFullScreen){
